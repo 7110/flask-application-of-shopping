@@ -116,7 +116,7 @@ def index():
         if keyword:
             yahoo = yahoo_(keyword)
             rakuten = rakuten_(keyword)
-            #amazon = amazon_(keyword)
+            amazon = amazon_(keyword)
             message = keyword
             yourIP = socket.gethostbyname(socket.gethostname())
             with open('histories.csv', mode = 'a', encoding = 'shift_jis') as imfo:
@@ -126,7 +126,7 @@ def index():
             message = "Please enter a product name"
         return render_template('search.html',
                                title=title, message=message, output_key=keyword,
-                               yahoo=yahoo, rakuten=rakuten)
+                               yahoo=yahoo, rakuten=rakuten, amazon=amazon)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=False)
