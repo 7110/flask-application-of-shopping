@@ -129,4 +129,4 @@ def index():
                                yahoo=yahoo, rakuten=rakuten, amazon=amazon)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True, port=8000)
